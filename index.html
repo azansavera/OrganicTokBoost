@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OrganicTokBoost</title>
+</head>
+<body>
+    <h1>OrganicTokBoost - TikTok Traffic Bot</h1>
+    <form method="post">
+        <label>Video URL:</label><br>
+        <input type="text" name="video_url" required><br><br>
+        <label>View Quantity:</label><br>
+        <input type="number" name="quantity" value="1000" required><br><br>
+        <input type="submit" value="Start Boosting">
+    </form>
+
+    {% if success is defined %}
+    <h2>✅ Traffic Sent!</h2>
+    <p><strong>Video:</strong> {{ url }}</p>
+    <p><strong>Requested:</strong> {{ quantity }}</p>
+    <p><strong>Success:</strong> {{ success }}</p>
+    <p><strong>Fails:</strong> {{ fails }}</p>
+    {% endif %}
+</body>
+</html>
