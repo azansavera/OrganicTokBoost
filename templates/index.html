@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OrganicTokBoost</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            padding: 40px;
+            text-align: center;
+        }
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+        }
+        .result {
+            margin-top: 20px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>OrganicTokBoost 🚀</h1>
+    <form method="POST">
+        <input type="url" name="video_url" placeholder="Paste your TikTok video URL" required><br>
+        <input type="number" name="quantity" placeholder="How many views? (e.g., 1000)" required><br>
+        <button type="submit">Send Organic Views</button>
+    </form>
+
+    {% if success is defined %}
+    <div class="result">
+        <h3>✅ Sent: {{ success }} views<br>❌ Failed: {{ fails }}<br>📦 Total Requested: {{ quantity }}</h3>
+        <p>🎯 Video: <a href="{{ url }}" target="_blank">{{ url }}</a></p>
+    </div>
+    {% endif %}
+</body>
+</html>
