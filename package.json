@@ -1,13 +1,12 @@
 {
   "name": "organictokboost",
   "version": "1.0.0",
-  "description": "TikTok organic traffic simulator",
+  "description": "TikTok organic traffic bot",
   "main": "app.py",
   "scripts": {
     "start": "python3 app.py"
   },
   "engines": {
     "node": "18.x"
-  },
-  "dependencies": {}
+  }
 }
